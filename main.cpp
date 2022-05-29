@@ -28,14 +28,9 @@ void LlegirArxiu(const std::string& nomArxiu, std::vector<Node>& v_nodes, std::v
     int nombreNodes;
 
     std::ifstream fitxer(nomArxiu);
-    fitxer >> nombreNodes;
     
+    fitxer >> nombreNodes;
     v_nodes.resize(nombreNodes);
-    /*for(int i = 0; i < nombreNodes; i++)
-    {
-        Node nouNode;
-        v_nodes.push_back(nouNode);
-    }*/
     
     while(!fitxer.eof())
     {

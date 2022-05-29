@@ -10,6 +10,11 @@ class Aresta
     void setFinal(const int nFinal) { m_nFinal = nFinal; }
     void setDirigit(const bool dirigit) { m_dirigit = dirigit; }
 
+    int getOrigen() const { return m_nOrigen; }
+    int getFinal() const { return m_nFinal; }
+    float getCost() const {return m_cost; }
+    bool getDirigit() const {return m_dirigit; }
+    
     private:
     float m_cost;
     int m_nOrigen, m_nFinal;
