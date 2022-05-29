@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "node.h"
+#include "algorismes.h"
 
 void LlegirArxiu(const std::string&, std::vector<Node>&, std::vector<Aresta>&);
 
@@ -11,7 +11,9 @@ int main()
 
     LlegirArxiu("./fitxer.txt", v_nodes, v_arestes);
 
-    std::cout << v_nodes.size() << v_arestes.size() << std::endl;
+    //DFS(v_nodes, v_arestes);
+
+    
 
     return 0;
 }
@@ -42,6 +44,7 @@ void LlegirArxiu(const std::string& nomArxiu, std::vector<Node>& v_nodes, std::v
         
         // llegir variables del fitxer
         fitxer >> nOrigen >> nFinal >> cost >> direccio;
+        std::cout << nOrigen << nFinal << cost << direccio << std::endl;
         
         // Afegir dades a aresta
         novaAresta.setOrigen(nOrigen);

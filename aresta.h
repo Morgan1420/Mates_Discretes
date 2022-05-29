@@ -15,6 +15,14 @@ class Aresta
     float getCost() const {return m_cost; }
     bool getDirigit() const {return m_dirigit; }
     
+    // Operator overloads
+    bool operator==(Aresta aresta2)
+    {
+        if(m_nOrigen == aresta2.getOrigen() && m_nFinal == aresta2.getFinal() && m_dirigit == aresta2.getDirigit() && m_cost == aresta2.getCost())
+            return true;
+        return false;
+    }
+
     private:
     float m_cost;
     int m_nOrigen, m_nFinal;
